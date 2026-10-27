@@ -7,7 +7,7 @@ import { defineConfig, fontProviders } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
   site: "https://melusinerey.fr/blog/",
-  base: "/blog/",
+  base: "/blog",
   integrations: [mdx(), sitemap()],
   fonts: [
     {
