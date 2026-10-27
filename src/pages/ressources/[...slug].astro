@@ -1,0 +1,20 @@
+---
+import { type CollectionEntry, getCollection, render } from 'astro:content';
+import RessourcePost from '../../layouts/RessourcePost.astro';
+
+export async function getStaticPaths() {
+	const ressources = await getCollection('ressources');
+	return ressources.map((ressource) => ({
+		params: { slug: ressource.id },
+		props: ressource,
+	}));
+}
+type Props = CollectionEntry<'ressources'>;
+
+const ressource = Astro.props;
+const { Content } = await render(ressource);
+---
+
+<RessourcePost {...ressource.data}>
+	<Content />
+</RessourcePost>
