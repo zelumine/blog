@@ -82,7 +82,7 @@ const ressources = (await getCollection('ressources'))
 				<ul>
 					{ressources.map((ressource) => (
 						<li>
-							<a href={`/ressources/${ressource.id}/`}>
+							<a href={`/blog/ressources/${ressource.id}/`}>
 								<h4 class="title">{ressource.data.title}</h4>
 							</a>
               <span>{ressource.data.categorie}</span>

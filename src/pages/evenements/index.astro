@@ -89,7 +89,7 @@ const events = await getCollection('evenements');
 				<ul>
 					{events.map((event) => (
 						<li>
-							<a href={`/evenements/${event.id}/`}>
+							<a href={`/blog/evenements/${event.id}/`}>
 								<h4 class="title">{event.data.title}</h4>
 								<p class="date">
 									<FormattedDate date={event.data.eventDate} />
